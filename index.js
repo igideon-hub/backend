@@ -73,7 +73,7 @@ app.post("/signup",(req,res)=>{
     let newUser = new UserModel(req.body);
     newUser.save()
     .then(()=>{
-        message = "User created successfully. Please sign in.";
+        message = "User created successfully. Please sign in";
         res.redirect("/signin");
     })
     .catch(err=>{
